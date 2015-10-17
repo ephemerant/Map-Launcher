@@ -12,16 +12,6 @@ Public Class Main
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            My.Computer.Registry.ClassesRoot.CreateSubKey(".pk3").SetValue("", "pk3", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.ClassesRoot.CreateSubKey("pk3\shell\open\command").SetValue("", Application.ExecutablePath & _
-    " ""%l"" ", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.ClassesRoot.CreateSubKey(".bsp").SetValue("", "bsp", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.ClassesRoot.CreateSubKey("bsp\shell\open\command").SetValue("", Application.ExecutablePath & _
-    " ""%l"" ", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.ClassesRoot.CreateSubKey(".urtdemo").SetValue("", "urtdemo", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.ClassesRoot.CreateSubKey("urtdemo\shell\open\command").SetValue("", Application.ExecutablePath & _
-    " ""%l"" ", Microsoft.Win32.RegistryValueKind.String)
-
             txtFile.Text = My.Settings.URT
             Dim args() As String = System.Environment.GetCommandLineArgs(), demo = False
 
